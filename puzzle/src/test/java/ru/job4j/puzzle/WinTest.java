@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class WinTest {
     @Test
-    public void  whenVerticalWin() {
+    public void whenVerticalWin() {
         int[][] board = {
                 {0, 0, 1, 0, 0},
                 {0, 0, 1, 0, 0},
@@ -20,7 +20,7 @@ public class WinTest {
     }
 
     @Test
-    public void  whenHorizontalWin() {
+    public void whenHorizontalWin() {
         int[][] board = {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
@@ -56,7 +56,7 @@ public class WinTest {
     }
 
     @Test
-    public void whenVertical2Win() {
+    public void  whenVertical2Win() {
         int[][] board = {
                 {0, 0, 0, 0, 1},
                 {0, 0, 0, 0, 1},
@@ -68,7 +68,7 @@ public class WinTest {
     }
 
     @Test
-    public void whenHorizontal2Win() {
+    public void  whenHorizontal2Win() {
         int[][] board = {
                 {1, 1, 1, 1, 1},
                 {0, 0, 0, 0, 0},

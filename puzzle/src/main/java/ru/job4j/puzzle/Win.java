@@ -24,6 +24,8 @@ public class Win {
         } else if (board[0][4] == 1 && board[1][4] == 1 & board[2][4] == 1 && board[3][4] == 1 && board[4][4] == 1) {
             rsl = true;
         }
+
             return rsl;
+
      }
 }
