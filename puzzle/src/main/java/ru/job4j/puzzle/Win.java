@@ -25,5 +25,5 @@ public class Win {
             rsl = true;
         }
             return rsl;
-    }
+     }
 }
