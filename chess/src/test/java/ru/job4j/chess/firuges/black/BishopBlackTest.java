@@ -26,6 +26,6 @@ public class BishopBlackTest {
     public void way(Cell dest) {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         bishopBlack.way(Cell.G5);
-        assertTrue();
+        assertTrue( ? );
     }
 }
