@@ -18,8 +18,8 @@ public class BishopBlackTest {
     @Test
     public void preciseCopy() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        Figure anotherBishopBlack = bishopBlack.copy(Cell.F1);
-        assertTrue(anotherBishopBlack.position() == Cell.F1);
+        Figure anotherBishopBlack = bishopBlack.copy(Cell.F4);
+        assertTrue(anotherBishopBlack.position() == Cell.F4);
     }
 
     @Test
