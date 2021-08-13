@@ -11,14 +11,14 @@ public class  BishopBlackTest {
     public void correctPosition() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         Cell expected = bishopBlack.position();
-        assertTrue(expected.equals(Cell.C1));
+        assertEquals(expected, Cell.C1);
     }
 
     @Test
     public void preciseCopy() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         Figure anotherBishopBlack = bishopBlack.copy(Cell.F4);
-        assertTrue((anotherBishopBlack.position()).equals(Cell.F4));
+        assertEquals((anotherBishopBlack.position()), Cell.F4);
     }
 
     @Test

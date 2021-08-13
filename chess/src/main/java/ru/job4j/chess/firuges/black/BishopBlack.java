@@ -23,7 +23,7 @@ public class  BishopBlack implements Figure {
                     String.format("Could not move by diagonal from %s to %s", position, dest)
             );
         }
-        int size = (Math.abs(x2 - x1);
+        int size = Math.abs(position.getX() - dest.getX());
         Cell[] steps = new Cell[size];
         int deltaX = 0;
         if (dest.getX() > position.getX()) {
@@ -49,8 +49,8 @@ public class  BishopBlack implements Figure {
 
     public boolean isDiagonal (Cell source, Cell dest) throws ImpossibleMoveException {
         boolean diagonal = true;
-        int deltaX = Math.abs(source.getX() - dest.getX());
-        int deltaY = Math.abs(source.getY() - dest.getY());
+        int deltaX = Math.abs(position.getX() - dest.getX());
+        int deltaY = Math.abs(position.getY() - dest.getY());
         if (deltaX != deltaY) {
             throw new ImpossibleMoveException(
                     String.format("Could not move by diagonal from %s to %s", position, dest)
