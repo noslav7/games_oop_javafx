@@ -5,7 +5,7 @@ import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 import static org.junit.Assert.*;
 
-public class  BishopBlackTest {
+public class BishopBlackTest {
 
     @Test
     public void correctPosition() {
