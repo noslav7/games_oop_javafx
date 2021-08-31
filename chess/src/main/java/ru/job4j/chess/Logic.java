@@ -20,7 +20,7 @@ public final class  Logic {
         figures[index] = figures[index].copy(dest);
     }
 
-    private boolean free(Cell[] steps) throws OccupiedCellException {
+    boolean free(Cell[] steps) throws OccupiedCellException {
         for (Figure figure : figures) {
             for (Cell step : steps) {
                 if (figure != null && figure.equals(steps)) {
