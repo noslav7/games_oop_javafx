@@ -7,26 +7,30 @@ import ru.job4j.chess.firuges.Figure;
 import ru.job4j.chess.firuges.black.BishopBlack;
 
 public class  LogicTest {
-    Cell position = Cell.C8;
-    BishopBlack blackBishop = new BishopBlack(position);
 
     @Test(expected = FigureNotFoundException.class)
-    public void whenFigureNotFound() throws FigureNotFoundException {
-        Logic chessGame = new Logic();
-            chessGame.findBy(position);
-        }
-
-    @Test(expected = OccupiedCellException.class)
-    public void whenCellOcupied() throws OccupiedCellException {
-        Cell[] steps = blackBishop.way(position);
-        Logic chessGames = new Logic();
-            chessGames.free(steps);
+    public void whenFigureNotFound()
+            throws FigureNotFoundException, ImpossibleMoveException, OccupiedCellException {
+        Logic logic = new Logic();
+        logic.move(Cell.C1, Cell.H6);
     }
 
     @Test(expected = ImpossibleMoveException.class)
-    public void whenImpossibleMove() {
-        blackBishop.way(position);
-        }
+    public void whenImpossibleMove()
+            throws FigureNotFoundException, ImpossibleMoveException, OccupiedCellException {
+        Logic logic = new Logic();
+        logic.add(new BishopBlack(Cell.C1));
+        logic.move(Cell.C1, Cell.C5);
+    }
+
+    @Test(expected = OccupiedCellException.class)
+    public void whenCellOccupied()
+            throws FigureNotFoundException, ImpossibleMoveException, OccupiedCellException {
+        Logic logic = new Logic();
+        logic.add(new BishopBlack(Cell.C1));
+        logic.add(new BishopBlack(Cell.D2));
+        logic.move(Cell.C1, Cell.E3);
+    }
 
         @Test
         public void move ()
